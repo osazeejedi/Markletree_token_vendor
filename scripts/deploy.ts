@@ -17,8 +17,8 @@ async function main() {
 
   console.log("dist deployed to:", dist.address);
 
-  const claimer = "0x0F188eCe555d848936b968DD0911200F79CE44F6";
-  const amount = 10000000000000000000;
+  const claimer = "0xaFd511df56590e6ab1771A3c0373063aFf7A1260";
+  const amount = '10000000000000000000';
 
   const getToken= await dist.claimToken(['0xeeec69a26eecbc1b4fcd220601e5f30022abbf6cd2e95ee090e75941b2db1f1d'], claimer, amount)
 

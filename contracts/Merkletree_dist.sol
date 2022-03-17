@@ -25,7 +25,7 @@ contract Merkle is ERC20{
 function claimToken (bytes32[] calldata proof, address claimer, uint256 amount) public {
 
     bytes32 leaf = keccak256(abi.encodePacked(claimer));
-    require (MerkleProof.verify(proof, Merkleroot, leaf), 'invalid proof');
+    require (MerkleProof.verify(proof, Merkleroot, leaf),"invalid proof");
 
     _mint (claimer, amount);
 
